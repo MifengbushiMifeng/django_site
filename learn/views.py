@@ -13,8 +13,12 @@ def index(request):
     content_str = u'Learning Django and building my first django web site.'
     tutoriallist = ['Python', 'Django', 'Jinja']
     info_dict = {'site': u'My First Django Site', 'content': u'Stay Hungary'}
+
+    list = map(str, range(100))
+
     return render(request, 'home.html', {'contentstr': content_str,
-                                         'TutorialList': tutoriallist, 'info_dict': info_dict})
+                                         'tutorialList': tutoriallist, 'info_dict': info_dict,
+                                         'list': list})
 
 
 def add(request, a, b):

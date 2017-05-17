@@ -12,8 +12,14 @@
 </div>
 
 <div>
+    {% for item in list %}
+        {{ item }} {% if not forloop.last %},{% endif %}
+    {% endfor %}
+</div>
+
+<div>
     The Tutorial List
-    {% for i in TutorialList %}
+    {% for i in tutorialList %}
         <p>{{ i }}</p>
     {% endfor %}
 
