@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}default title{% endblock %} - First Django App</title>
+</head>
+<body>
+{% include 'nav.html' %}
+
+{% block content %}
+    <div>This part is the default content, it will show if not been override</div>
+{% endblock %}
+
+{% include 'bottom.html' %}
+
+{% include 'count.html' %}
+
+</body>
+</html>

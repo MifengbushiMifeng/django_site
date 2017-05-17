@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^$', learn_views.index, name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^add_new/(\d+)/(\d+)$', learn_views.add, name='add'),
+    url(r'^add/(\d+)/(\d+)$', learn_views.old_add_redirect, name='add2')
 
 ]

@@ -5,8 +5,14 @@
     <title>First Django App</title>
 </head>
 <body>
+<div>
 
-<a href="{% url 'add' 4 5 %}">plus 4 + 5</a>
+    {{ contentstr }}
 
+</div>
+<div style="display: none">
+    <a href="{% url 'add' 4 5 %}">plus 4 + 5</a>
+    <a href="/add/1/2">old link for plus 1 + 2</a>
+</div>
 </body>
 </html>
