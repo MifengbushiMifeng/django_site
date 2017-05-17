@@ -11,7 +11,10 @@ from django.core.urlresolvers import reverse
 def index(request):
     # return HttpResponse(u'Welcome to your first page.')
     content_str = u'Learning Django and building my first django web site.'
-    return render(request, 'home.html', {'contentstr': content_str})
+    tutoriallist = ['Python', 'Django', 'Jinja']
+    info_dict = {'site': u'My First Django Site', 'content': u'Stay Hungary'}
+    return render(request, 'home.html', {'contentstr': content_str,
+                                         'TutorialList': tutoriallist, 'info_dict': info_dict})
 
 
 def add(request, a, b):

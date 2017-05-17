@@ -10,6 +10,26 @@
     {{ contentstr }}
 
 </div>
+
+<div>
+    The Tutorial List
+    {% for i in TutorialList %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+</div>
+
+<div>
+
+    Site: {{ info_dict.site }} /
+    Content: {{ info_dict.content }}
+
+</div>
+<div>
+    {% for key,value in info_dict.iteritems %}
+        {{ key }}  ---  {{ value }}
+    {% endfor %}
+</div>
 <div style="display: none">
     <a href="{% url 'add' 4 5 %}">plus 4 + 5</a>
     <a href="/add/1/2">old link for plus 1 + 2</a>
