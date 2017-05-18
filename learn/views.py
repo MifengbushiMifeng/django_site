@@ -26,6 +26,14 @@ def add(request, a, b):
     return HttpResponse(str(c))
 
 
+def add_flexible(request):
+    a = request.GET['a']
+    b = request.GET['b']
+    a = int(a)
+    b = int(b)
+    return HttpResponse(str(a + b))
+
+
 def old_add_redirect(request, a, b):
     # return HttpResponseRedirect(
     #     reverse('add2', args=(a, b))
